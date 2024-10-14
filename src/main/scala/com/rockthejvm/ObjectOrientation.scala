@@ -11,10 +11,11 @@ object ObjectOrientation extends App {
     // define methods
     def eat() = println("I'm eating")
   }
-
+  
+  // instance (can create a concrete representation of this type in memory by the constructor 'new')
   val anAnimal = new Animal
 
-  // inheritance
+  // inheritance (inheriting all its members and all its methods)
   class Dog(val name: String) extends Animal // constructor definition
   val aDog = new Dog("Lassie")
 
@@ -28,6 +29,8 @@ object ObjectOrientation extends App {
   // abstract class
   abstract class WalkingAnimal {
     val hasLegs = true // by default public, can restrict by adding protected or private
+                        // private: only the class has access to this member or method
+                        // protected: this class and all its descendants have access to this method, but not outside of the class
     def walk(): Unit
   }
 
