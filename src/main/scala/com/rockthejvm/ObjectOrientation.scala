@@ -40,7 +40,7 @@ object ObjectOrientation extends App {
   }
 
   trait Philosopher {
-    def ?!(thought: String): Unit // valid method name
+    def ?!(thought: String): Unit // ?! valid method name - ?: aka  !:communicate with actors Asynchronously
   }
 
   // single-class inheritance, multi-trait "mixing"
@@ -56,7 +56,7 @@ object ObjectOrientation extends App {
   aCroc ?! "What if we could fly?"
 
   // operators in Scala are actually methods
-  val basicMath = 1 + 2
+  val basicMath = 1 + 2 //method belonging to Int type
   val anotherBasicMath = 1.+(2) // equivalent
 
   // anonymous classes
